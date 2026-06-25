@@ -1,0 +1,46 @@
+.problems__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.problem-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: border-color var(--transition-base), background var(--transition-base);
+}
+
+.problem-card:hover {
+  border-color: rgba(255, 100, 100, 0.3);
+  background: var(--color-bg-card-hover);
+}
+
+.problem-card__icon {
+  font-size: 1.75rem;
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.problem-card__title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-bottom: var(--space-2);
+}
+
+.problem-card__desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .problems__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .problems__grid { grid-template-columns: 1fr; }
+}
